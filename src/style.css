@@ -1,29 +1,29 @@
-:root{
-    --dark: #c41e71;
+:root {
+    --dark: #0B090A;
     --text: #ffffff;
-    --bg:#161A1D;
-    --red1: #a71c7d;
-    --red2: #a41675;
-    --red3: #ba1869;
-    --red4: #e538b1;
-    --font:"Roboto", sans-serif;
+    --bg: #161A1D;
+    --red1: #660709b4;
+    --red2: #A4161A;
+    --red3: #BA181B;
+    --red4: #E5383B;
+    --font: "Roboto", sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: var(--font);
     background-color: var(--bg);
     color: var(--text);
     overflow-x: hidden;
 }
 
-nav{
+nav {
     width: 100%;
     position: fixed;
     top: 0;
@@ -38,19 +38,19 @@ nav{
     animation: decima 1s ease-in-out;
 }
 
-nav.sc{
+nav.sc {
     background-color: var(--red1);
     box-shadow: 10px 3px 10px var(--red1);
 }
 
 @keyframes decima {
-    0%{
+    0% {
         transform: translateY(-100px);
     }
 }
 
-.navItems{
-    background-color: #af206867;
+.navItems {
+    background-color: #ffffff67;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,15 +59,15 @@ nav.sc{
     border-radius: 999px;
 }
 
-.navItems img{
+.navItems img {
     width: 30px;
 }
 
-.navItems:hover{
+.navItems:hover {
     cursor: pointer;
 }
 
-.navItems a{
+.navItems a {
     color: inherit;
     text-decoration: none;
     font-size: 1vw;
@@ -77,16 +77,103 @@ nav.sc{
     font-weight: 700;
 }
 
-.navItems a:hover{
-    text-shadow: 0px 3px 10px var(--text);
+.navItems a:hover {
+    text-shadow: 0px 3px 10px var(--red4);
     opacity: 1;
 }
 
-section{
+section {
     min-height: 100vh;
     height: auto;
 }
-#s1{
-    background-image: url(../assets/images/whale-pink-vibrant-monochromatic-environment-concept-animal-portraits-vibrant-colors-monochromatic-photography-creative-concepts_864588-51302.avif);
- background-position: center;
+
+#s1 {
+    background-image: url('../assets/images/fae49b7b0c986bcaf9d6a51227cc84c172691ab5ff1f0b1ff212709bee098386.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+    font-size: 220px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 5px var(--text);
+    letter-spacing: 7px;
+    width: 100%;
+    text-align: center;
+    line-height: 155px;
+    text-shadow: 0px 3px 10px var(--text);
+    animation: esquerda 2s ease-in-out;
+}
+
+@keyframes esquerda {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    width: 67%;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 0px 3px 10px var(--red4);
+    animation: direita 2s ease-in-out;
+}
+
+@keyframes direita {
+    0% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60px;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+footer.ft {
+    background-color: var(--red1);
+    box-shadow: 10px 3px 10px var(--red1);
+}
+
+.vid {
+    width: 100%;
+    height: 800px;
+}
+
+@media (width <=1000px) {
+    .navWords {
+        display: none;
+    }
+
+    .vid {
+        height: 412px;
+    }
+
+
+    #s1 {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background-image: url('../assets/images/ferrarimobile.jpg');
+    }
 }
